@@ -1,33 +1,51 @@
----
-title: Rizwan Exports
----
+;;;
+"title": "RGS International",
+"products": [
+  {"name":"Clothing & Apparels", "image":"clothings-1.jpg", "page": "product_clothing.html"},
+  {"name":"Indian Agro Products", "image":"indian-agro-4.jpg", "page": "product_agro.html"},
+  {"name":"LED Lights & Fittings", "image":"led-1.jpg", "page": "product_led.html"},
+  {"name":"Hospitality Products", "image":"hospitality-1.jpeg", "page": "product_hospitality.html"}
+]
+;;;
 
-<div class="jumbotron">
-  <h1>Lorem Ipsom</h1>
-  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-  </p>
+<div class="marketing">
+  
+  <h4>
+    RGS International
+  </h4>
+  <br>
+  <p>We, at RGS International , value our clients and endeavor to not only for see their demands but also provide world class services along with products. We believe in creating serious and lasting strategic relationships with our clients. We delight our customers with our responsive attitude, by introducing innovative products with superior quality reliability at an affordable cost. We aspire to grow further and increase the product line.</p>
+  <br>
+  <h4>
+    Our Product Range
+  </h4>
 </div>
 
-<div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
 
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+<% current_page.data.products.each_with_index do |p,i| %>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+<% if i.even? %>
+<div class="row">
+<% end %>  
+
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <%= image_tag p["image"] , class:"index_p"%>
+      <div class="caption">
+        <% link_to p["page"], class:"nostyle" do %>
+          <h3><%= p["name"] %></h3>
+        <% end %>    
+      </div>
+    </div>
+  </div>
+
+<% if !i.even? %>  
 </div>
+<% end %>
+
+<% end %>
+
+

@@ -69,6 +69,10 @@ body {
   margin-top: 28px;
 }
 
+.marketing p{
+  font-size: 16px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -100,4 +104,13 @@ body{
 div#map img{
   max-width: 100%;
   max-height: 100%;
+}
+
+img.index_p{
+  width:300px !important;
+  height: 300px !important;  
+}
+a.nostyle{
+  text-decoration:none;
+  color:black;
 }
