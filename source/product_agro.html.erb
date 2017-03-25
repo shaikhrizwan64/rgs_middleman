@@ -1,3 +1,12 @@
+;;;
+"products": [
+  {"name":"Fresh Mangoes", "image":"indian-agro-4.jpg", "page": "product_agro/mangoes.html"},
+  {"name":"Fresh Pomegranates", "image":"led-1.jpg", "page": "product_agro/pomegranates.html"},
+  {"name":"Cumin Seeds", "image":"hospitality-1.jpeg", "page": "product_agro/cumin-seeds.html"},
+  {"name":"Onions", "image":"hospitality-1.jpeg", "page": "product_agro/onions.html"}
+]
+;;;
+
 <h4>
     Indian Agro Products
   </h4>
@@ -6,12 +15,13 @@
   <br>
 
 <div class="row">
-<% 6.times do |i| %>
-  <div class="col-sm-4">
+<% current_page.data.products.each do |p| %>
+  <div class="col-sm-3">
     <div class="thumbnail">
+
       <img src="http://lorempixel.com/300/300/food" alt="">
       <div class="caption">
-          <h3>Product A</h3>
+          <%= link_to p[:name], "/#{p[:page]}" %>
       </div>
     </div>
   </div>
