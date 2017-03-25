@@ -1,7 +1,6 @@
 ;;;
 "title": "RGS International",
 "products": [
-  {"name":"Clothing & Apparels", "image":"clothings-1.jpg", "page": "product_clothing.html"},
   {"name":"Indian Agro Products", "image":"indian-agro-4.jpg", "page": "product_agro.html"},
   {"name":"LED Lights & Fittings", "image":"led-1.jpg", "page": "product_led.html"},
   {"name":"Hospitality Products", "image":"hospitality-1.jpeg", "page": "product_hospitality.html"}
@@ -22,18 +21,12 @@
 </div>
 
 
-
-
-
-<% current_page.data.products.each_with_index do |p,i| %>
-
-<% if i.even? %>
 <div class="row">
-<% end %>  
-
-  <div class="col-sm-6">
+<% current_page.data.products.each_with_index do |p,i| %>
+  <div class="col-sm-4">
     <div class="thumbnail">
-      <%= image_tag p["image"] , class:"index_p"%>
+      <!-- <%= image_tag p["image"] , class:"index_p"%> -->
+      <img src="http://lorempixel.com/300/300/" alt="">
       <div class="caption">
         <% link_to p["page"], class:"nostyle" do %>
           <h3><%= p["name"] %></h3>
@@ -41,11 +34,10 @@
       </div>
     </div>
   </div>
-
-<% if !i.even? %>  
+<% end %>
 </div>
-<% end %>
 
-<% end %>
+
+
 
 
