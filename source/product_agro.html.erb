@@ -1,9 +1,9 @@
 ;;;
 "products": [
-  {"name":"Fresh Mangoes", "image":"indian-agro-4.jpg", "page": "product_agro/mangoes.html"},
-  {"name":"Fresh Pomegranates", "image":"led-1.jpg", "page": "product_agro/pomegranates.html"},
-  {"name":"Cumin Seeds", "image":"hospitality-1.jpeg", "page": "product_agro/cumin-seeds.html"},
-  {"name":"Onions", "image":"hospitality-1.jpeg", "page": "product_agro/onions.html"}
+  {"name":"Fresh Mangoes", "image":"v1490684155/Mango-Agro_index_lba5ei.png", "page": "product_agro/mangoes.html"},
+  {"name":"Fresh Pomegranates", "image":"v1490684157/Pomegranate-Agro_index_haqdt1.png", "page": "product_agro/pomegranates.html"},
+  {"name":"Cumin Seeds", "image":"v1490684155/Cumin-Agro_index_yvavxd.png", "page": "product_agro/cumin-seeds.html"},
+  {"name":"Fresh Onions", "image":"v1490684156/Onion-Agro_index_fsedzk.png", "page": "product_agro/onions.html"}
 ]
 ;;;
 
@@ -18,8 +18,11 @@
 <% current_page.data.products.each do |p| %>
   <div class="col-sm-3">
     <div class="thumbnail">
-
-      <img src="http://placehold.it/300x300" alt="">
+      <% imgsrc = "http://res.cloudinary.com/rgsint/image/upload/#{p[:image]}" %>
+      
+      <% link_to p[:page], class:"nostyle" do %>
+        <img src="<%= imgsrc %>" alt="">
+      <% end %>
       <div class="caption">
           <%= link_to p[:name], "/#{p[:page]}" %>
       </div>
