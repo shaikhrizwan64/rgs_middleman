@@ -6,12 +6,13 @@
 
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  //padding-top: 20px;
+  //padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -93,7 +94,7 @@ body {
 }
 
 body{
-  margin-top:45px;
+  //margin-top:45px;
 }
 
 .avatar{
@@ -121,4 +122,16 @@ div#google_translate_element{
   right:15px;
 }
 
+nav.logo{
+  height: 120px;
+  margin:0px;
+}
 
+.navbar-inverse {
+  background-color: #183883;
+  border-color: #183883;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: #ffffff;
+}
