@@ -7,9 +7,9 @@
 ]
 ;;;
 
-<h4>
+<h3>
     Indian Agro Products
-  </h4>
+  </h3>
   <br>
   <p>We are a reputable agriculture commodities and export company with experience and requisite expertise to meet your need. We process, package and export premium quality agro commodities in hygienic environment to our customers globally. Check below for products we deal in.</p>
   <br>
@@ -17,7 +17,7 @@
 <div class="row">
 <% current_page.data.products.each do |p| %>
   <div class="col-sm-3">
-    <div class="thumbnail">
+    <div class="thumbnail noborder">
       <% imgsrc = "http://res.cloudinary.com/rgsint/image/upload/#{p[:image]}" %>
       
       <% link_to p[:page], class:"nostyle" do %>
