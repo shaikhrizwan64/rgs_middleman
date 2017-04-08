@@ -4,9 +4,17 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    
+    <%
+      seo_title = current_page.data.title || "RGS International | Exporter and Supplier"
+      seo_description = current_page.data.description || "RGS International: Exporter and Supplier of Indian agriculture products, fresh fruits, vegetables, bed linens, bath linens and led flood lights."
+      seo_keywords = current_page.data.keywords || "RGS International, Exporter India, Supplier India,Agriculture Products,Fresh Fruits,Vegetables, bed linens, bath linens, led flood lights"
+    %>
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "RGS International" %></title>
+    <title><%= seo_title %></title>
+    <meta name="description" content="<%= seo_description %>">
+    <meta name="keywords" content="<%= seo_keywords %>">
+    <link rel="canonical" href="http://www.rgsinternational.in/">
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
